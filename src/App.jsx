@@ -42,7 +42,7 @@ function App() {
 				setTotalPages(data.total_pages);
 				setLoading(false);
 			} catch (error) {
-				setError("Something went wront", error?.message);
+				setError("Something went wrong", error?.message);
 				console.error(error);
 				setLoading(false);
 			}
