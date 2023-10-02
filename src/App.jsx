@@ -15,17 +15,13 @@ function App() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log("Form submitted with ", searchInput.current.value);
-		//window.location.href = `/search?q=${searchInput.current.value}`;
+		resetSearch();
 		formWrapper.current.reset();
 		searchInput.current.focus();
-		resetSearch();
 	};
 
 	const handleSelection = (selection) => {
 		searchInput.current.value = selection;
-		console.log("Selection is ", selection);
-		//window.location.href = `/search?q=${searchInput.current.value}`;
 		resetSearch();
 	};
 
@@ -37,7 +33,6 @@ function App() {
 				const { data } = await axios.get(
 					`${baseUrl}?query=${searchInput.current?.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${key}`
 				);
-				console.log("data", data);
 				setImages(data.results);
 				setTotalPages(data.total_pages);
 				setLoading(false);
