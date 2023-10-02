@@ -1,9 +1,10 @@
 ## Hacktoberfest guide
 * Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
 * Clone your fork down to your local machine
+* Register at https://unsplash.com/developers to get your api KEY
 
 ```markdown
-git clone https://github.com/your-username/hacktoberfest.git
+git clone  this repo
 ```
 
 * Create a branch
