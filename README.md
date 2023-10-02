@@ -4,7 +4,7 @@
 * Register at https://unsplash.com/developers to get your api KEY
 
 ```markdown
-git clone  this repo
+git clone https://github.com/Zackaria-Slimane/unFetch.git
 ```
 
 * Create a branch
