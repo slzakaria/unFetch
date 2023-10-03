@@ -4,7 +4,6 @@ import Header from "./components/Header";
 
 function App() {
   const searchInput = useRef("null");
-
   const [loading, setLoading] = useState(false);
   const [erros, setError] = useState("");
   const [images, setImages] = useState([]);
