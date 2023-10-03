@@ -4,7 +4,6 @@ import Header from "./components/Header";
 
 function App() {
   const searchInput = useRef("null");
-  const formWrapper = useRef("null");
   const [loading, setLoading] = useState(false);
   const [erros, setError] = useState("");
   const [images, setImages] = useState([]);
@@ -18,8 +17,7 @@ function App() {
     console.log("Form submitted with ", searchInput.current.value);
  
     resetSearch();
-    formWrapper.current.reset();
-    searchInput.current.focus();
+   searchInput.current.focus();
   };
 
   const handleSelection = (selection) => {
@@ -69,7 +67,7 @@ function App() {
         <h1 className="text-center text-2xl mt-10 mb-6 sm:mt-28 sm:mb-12">
           Search for high quality images without watermarks
         </h1>
-        <form onSubmit={handleSubmit} ref={formWrapper}>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="search" className="sr-only">
             Search
           </label>
