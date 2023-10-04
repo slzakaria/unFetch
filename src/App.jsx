@@ -15,9 +15,9 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form submitted with ", searchInput.current.value);
- 
+
     resetSearch();
-   searchInput.current.focus();
+    searchInput.current.focus();
   };
 
   const handleSelection = (selection) => {
@@ -67,25 +67,30 @@ function App() {
         <h1 className="text-center text-2xl mt-10 mb-6 sm:mt-28 sm:mb-12 ">
           Search for High Quality Images without Watermarks
         </h1>
-        <form onSubmit={handleSubmit} className="flex items-center justify-center">
-      <label htmlFor="search" className="sr-only">
-        Search
-      </label>
-      <input
-        ref={searchInput}
-        type="search"
-        id="search"
-        className="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1F2937] focus:border-[#1F2937] block sm:w-4/5 w-full p-2.5"
-        placeholder="Search ..."
-        required
-      />
-      <button
-        type="submit"
-        className="bg-[#1F2937] text-white px-4 py-2 rounded-lg ml-2"
-      >
-        Search
-      </button>
-    </form>
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center">
+          <label htmlFor="search" className="sr-only">
+            Search
+          </label>
+          <div className="flex flex-col sm:flex-row w-full">
+            <input
+              ref={searchInput}
+              type="search"
+              id="search"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1F2937] focus:border-[#1F2937] block w-full p-2.5 mb-2"
+              placeholder="Search ..."
+              required
+            />
+
+            <button
+              type="submit"
+              className="bg-[#1F2937] text-white px-4 py-2 h-10 rounded-lg sm:ml-2"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+
+
       </div>
 
       <div className="flex gap-3 mx-6 sm:w-2/5 sm:mx-auto justify-around my-8 items-center">
