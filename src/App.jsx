@@ -64,22 +64,28 @@ function App() {
     <>
       <Header />
       <div className="sm:w-2/5 w-4/5 mx-auto">
-        <h1 className="text-center text-2xl mt-10 mb-6 sm:mt-28 sm:mb-12">
-          Search for high quality images without watermarks
+        <h1 className="text-center text-2xl mt-10 mb-6 sm:mt-28 sm:mb-12 ">
+          Search for High Quality Images without Watermarks
         </h1>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="search" className="sr-only">
-            Search
-          </label>
-          <input
-            ref={searchInput}
-            type="search"
-            id="search"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block sm:w-4/5 w-full p-2.5 mx-auto"
-            placeholder="Search ....."
-            required
-          />
-        </form>
+        <form onSubmit={handleSubmit} className="flex items-center justify-center">
+      <label htmlFor="search" className="sr-only">
+        Search
+      </label>
+      <input
+        ref={searchInput}
+        type="search"
+        id="search"
+        className="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1F2937] focus:border-[#1F2937] block sm:w-4/5 w-full p-2.5"
+        placeholder="Search ..."
+        required
+      />
+      <button
+        type="submit"
+        className="bg-[#1F2937] text-white px-4 py-2 rounded-lg ml-2"
+      >
+        Search
+      </button>
+    </form>
       </div>
 
       <div className="flex gap-3 mx-6 sm:w-2/5 sm:mx-auto justify-around my-8 items-center">
