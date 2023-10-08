@@ -14,3 +14,24 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* CSS for toggle button */
+.toggle-button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dark mode styles */
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+/* Light mode styles */
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
