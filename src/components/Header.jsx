@@ -4,7 +4,7 @@ const Header = () => {
 	return (
 		<header className='my-4 py-2 shadow-md'>
 			<div className='flex gap-4 justify-between mx-10'>
-				<h1 className='text-center text-2xl font-bold text-gray-800'>unFecth</h1>
+				<h1 className='text-center text-2xl font-bold text-gray-800'>unFetch</h1>
 				<nav>
 					<ul className='flex gap-4 text-2xl'>
 						<li>
