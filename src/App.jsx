@@ -56,17 +56,17 @@ function App() {
 	return (
 		<>
 			<Header />
-			<div className='sm:w-2/5 w-4/5 mx-auto'>
-				<h1 className='text-center text-2xl mt-10 mb-6 sm:mt-28 sm:mb-12 '>
+			<div className='w-4/5 mx-auto sm:w-2/5'>
+				<h1 className='mt-10 mb-6 text-2xl text-center sm:mt-28 sm:mb-12 '>
 					Search for High Quality Images without Watermarks
 				</h1>
 				<form
 					onSubmit={handleSubmit}
-					className='flex flex-col sm:flex-row items-center justify-center'>
+					className='flex flex-col items-center justify-center sm:flex-row'>
 					<label htmlFor='search' className='sr-only'>
 						Search
 					</label>
-					<div className='flex flex-col sm:flex-row w-full'>
+					<div className='flex flex-col w-full sm:flex-row'>
 						<input
 							ref={searchInput}
 							type='search'
@@ -86,10 +86,10 @@ function App() {
 			</div>
 
 			{loading ? (
-				<p className='text-center text-2xl text-orange-600'>Loading...</p>
+				<p className='text-2xl text-center text-orange-600'>Loading...</p>
 			) : (
 				<>
-					<div className='grid grid-cols-2 sm:grid-cols-4 gap-4 mx-auto px-10 w-full my-10 overflow-x-hidden overflow-y-scroll'>
+					<div className='grid w-full grid-cols-2 gap-4 px-10 mx-auto my-10 overflow-x-hidden overflow-y-scroll sm:grid-cols-4'>
 						{images.map((image) => {
 							return (
 								<a
@@ -110,20 +110,20 @@ function App() {
 				</>
 			)}
 
-			{erros && <p className='text-center text-2xl mx-auto text-red-600'>{erros}</p>}
+			{erros && <p className='mx-auto text-2xl text-center text-red-600'>{erros}</p>}
 
-			<div className='w-4/5 mx-auto text-center mt-4 mb-10'>
+			<div className='w-4/5 mx-auto mt-4 mb-10 text-center'>
 				{page > 1 && (
 					<button
 						onClick={() => setPage(page - 1)}
-						className='bg-gray-300 w-fit py-1 px-4 rounded-md text-black hover:scale-105 mx-2'>
+						className='px-4 py-1 mx-2 text-black bg-gray-300 rounded-md w-fit hover:scale-105'>
 						Previous
 					</button>
 				)}
 				{page < totalPages && (
 					<button
 						onClick={() => setPage(page + 1)}
-						className='bg-gray-300 w-fit py-1 px-4 rounded-md text-black hover:scale-105'>
+						className='px-4 py-1 text-black bg-gray-300 rounded-md w-fit hover:scale-105'>
 						Next
 					</button>
 				)}
