@@ -17,7 +17,7 @@ const Header = () => {
 		<header className='my-4 py-2 shadow-md'>
 			<div className='flex gap-4 justify-between mx-10'>
 				<h1 className={`text-center text-2xl font-bold ${themeClass === 'light-theme' ? 'text-gray-800' : 'text-white'}`}>
-					unFecth
+					unFetch
 				</h1>
 				<nav>
 					<ul className='flex gap-4 text-2xl'>
