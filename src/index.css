@@ -2,47 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --background-color-light: #f3f3f3; 
-  --text-color-light: #333333; 
-  --accent-color-light: #04243a; 
+	--background-color-light: #f3f3f3;
+	--text-color-light: #333333;
+	--accent-color-light: #04243a;
 
-  --background-color-dark: #131313; 
-  --text-color-dark: #ffffff; 
-  --accent-color-dark: #ffffff; 
+	--background-color-dark: #131313;
+	--text-color-dark: #ffffff;
+	--accent-color-dark: #ffffff;
 }
 
 /* Light Theme */
 body.light-theme {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
-  --accent-color: var(--accent-color-light);
+	background-color: var(--background-color-light);
+	color: var(--text-color-light);
+	--accent-color: var(--accent-color-light);
 }
 
 /* Dark Theme */
 body.dark-theme {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-  --accent-color: var(--accent-color-dark); 
+	background-color: var(--background-color-dark);
+	color: var(--text-color-dark);
+	--accent-color: var(--accent-color-dark);
 }
 
 a {
-  color: var(--accent-color); 
+	color: var(--accent-color);
 }
 
-
-
-
 .square-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
 }
 
 .square-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
